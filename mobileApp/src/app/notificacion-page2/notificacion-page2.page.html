@@ -1,0 +1,73 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar style="--background: black; border-bottom: #F4CC27 solid;">
+    <ion-img slot="start" style="height: 70px;" src="assets/img/principal/LogoMenu.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color:#F4CC27;"></ion-menu-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  
+  <ion-toolbar  style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+    <div style="margin-top: 10px;">
+      <img (click)="prevPage()" style="height: 20px;display: inline; width: 20px; vertical-align: super;" src="assets/img/conocenos/Return.png">
+      <img (click)="prevPage()" style="height: 40px;display: inline; width: 40px;" src="assets/img/notificaciones/campana.png">      
+      <h6 (click)="prevPage()" style="margin-left: 10px;display: inline; text-decoration: underline;color: white; text-decoration-color: #F4CC27;vertical-align: top;">Notificaciones</h6>
+    </div>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+
+
+  <ion-card>
+    <ion-card-header style="padding-bottom: 0px;">
+      <ion-card-subtitle>Algunos de tus compresores ya cumplieron 100 dias para su Kaeser Air Services, verifica aquí sus estatus.</ion-card-subtitle>      
+    </ion-card-header>
+  
+  
+    <ion-list>
+      <ion-item *ngFor="let entry of form">
+
+        <ion-grid>
+            <ion-row>            
+              <ion-col style="text-align: center;">              
+                  <strong>{{entry.val}}</strong>              
+              </ion-col>
+            </ion-row>
+            <ion-row>            
+              <ion-col size="10" style="text-align: center;">
+                <ion-progress-bar style="height: 40px; border-radius: 20px;" color={{entry.color}} value={{entry.value}}></ion-progress-bar>
+              </ion-col>                        
+              <ion-col size="2">              
+                <ion-toggle (ionChange)="crazyEvent($event)" value={{entry.val}} color="warning"></ion-toggle>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>            
+              <ion-col style="text-align: justify;">              
+                  <ion-card-subtitle [innerHTML]="entry.message"></ion-card-subtitle>              
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+
+        
+        
+      </ion-item>
+    </ion-list>
+
+
+
+    <div style="text-align: -webkit-center;">
+      <ion-button style="font-weight: bold;--border-radius: 25px;--padding: 0 25px;" color="warning" (click)="nextPage()">COTIZAR</ion-button>    
+    </div>
+  
+  </ion-card>
+  
+  
+  
+  
+</ion-content>

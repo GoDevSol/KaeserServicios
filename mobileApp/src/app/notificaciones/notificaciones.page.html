@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: black; border-bottom: #F4CC27 solid;">
+    <ion-img slot="start" style="height: 70px;" src="assets/img/principal/LogoMenu.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color:#F4CC27;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+
+  <ion-toolbar
+    style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+    <div style="margin-top: 10px;">
+      <img (click)="home()" style="height: 20px;display: inline; width: 20px; vertical-align: super;"
+        src="assets/img/conocenos/Return.png">
+      <img (click)="home()" style="height: 40px;display: inline; width: 40px;"
+        src="assets/img/notificaciones/campana.png">
+      <h6 (click)="home()"
+        style="margin-left: 10px;display: inline; text-decoration: underline;color: white; text-decoration-color: #F4CC27;vertical-align: top;">
+        Notificaciones</h6>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+  style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+
+
+  <ion-card>
+    <ion-card-header style="padding-bottom: 0px;">
+      <ion-card-subtitle>Recibe tus notificaciones al instante sobre los mantenimientos previos de tu compresor Kaeser.
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-img style="height: 200px; margin-top: 20px;" src="assets/img/notificaciones/Notificacion.png"></ion-img>
+
+
+
+
+
+
+
+
+    <div style="text-align: -webkit-center;">
+      <ion-button style="--border-radius: 25px;--padding: 0 25px;" color="warning" (click)="nextPage()">VERIFICAR
+      </ion-button>
+    </div>
+
+    <ion-img style="height: 75px;" src="assets/img/principal/LogoKaeser.png"></ion-img>
+
+
+  </ion-card>
+
+
+
+</ion-content>

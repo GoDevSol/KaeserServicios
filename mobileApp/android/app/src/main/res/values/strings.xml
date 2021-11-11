@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Kaeser</string>
+    <string name="title_activity_main">Kaeser</string>
+    <string name="package_name">com.kaeser.app</string>
+    <string name="custom_url_scheme">com.kaeser.app</string>
+</resources>

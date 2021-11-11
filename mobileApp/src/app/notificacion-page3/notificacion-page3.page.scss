@@ -1,0 +1,30 @@
+  
+  .roundedInput {
+    --border-color: var(--ion-color-medium-shade);
+    margin-top: 5px;
+    padding: 0px 15px;
+    font-size: 14px;
+    --border-radius: 15px;
+    --border-width: 1px;
+    --box-shadow: 5px white;
+    --color: black;
+    --highlight-height: 0;    
+   }
+
+   
+   .roundedInput.ion-invalid.item-has-focus {
+
+    --border-color: var(--ion-color-danger-shade);
+  }
+  
+  .roundedInput.ion-valid.item-has-focus {
+    --border-color: var(--ion-color-success-shade);
+  }
+  
+  .roundedInput.ion-invalid.ion-dirty {
+    --border-color: var(--ion-color-danger-shade);
+  }
+  
+  .roundedInput.ion-valid.ion-dirty {
+    --border-color: var(--ion-color-success-shade);
+  }

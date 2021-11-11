@@ -1,0 +1,152 @@
+<div class="animated fadeIn">
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Configuraciones
+        </div>
+        <div class="card-body">
+
+
+
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <strong>Usuarios por Compañia </strong>
+              </div>
+              <div class="card-body">
+
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="hf-email">Compañia</label>
+
+                  <div class="col-md-9">
+                    <input [(ngModel)]="selectedValue" [typeahead]="states" typeaheadOptionField="cliente"
+                      (typeaheadOnSelect)="onSelect($event)" (typeaheadOnPreview)="onPreview($event)"
+                      class="form-control">
+                  </div>
+                </div>
+
+
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="hf-email">Cantidad de Usuarios</label>
+
+                  <div class="col-md-9">
+                    <input [(ngModel)]="CantidadPermitida" class="form-control">
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <div class="card-footer">
+                <button (click)="ActualizarCantidad()" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>
+                  Actualizar</button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <strong>Correo administrativo</strong>
+              </div>
+              <div class="card-body">
+
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="hf-email">Cuenta de Correo</label>
+
+                  <div class="col-md-9">
+                    <input [(ngModel)]="CorreoAdmin.valor" type="email" class="form-control">
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <div class="card-footer">
+                <button (click)="ActualizarCorreo(CorreoAdmin)" class="btn btn-sm btn-success"><i
+                    class="fa fa-dot-circle-o"></i>
+                  Actualizar</button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <strong>Correo Cotizaciones</strong>
+              </div>
+              <div class="card-body">
+
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="hf-email">Cuenta de Correo</label>
+
+                  <div class="col-md-9">
+                    <input [(ngModel)]="CorreoCotizacion.valor" type="email" class="form-control">
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <div class="card-footer">
+                <button (click)="ActualizarCorreo(CorreoCotizacion)" class="btn btn-sm btn-success"><i
+                    class="fa fa-dot-circle-o"></i>
+                  Actualizar</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <strong>Correo convenios</strong>
+              </div>
+              <div class="card-body">
+
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="hf-email">Cuenta de Correo</label>
+
+                  <div class="col-md-9">
+                    <input [(ngModel)]="CorreoConvenio.valor" type="email" class="form-control">
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <div class="card-footer">
+                <button (click)="ActualizarCorreo(CorreoConvenio)" class="btn btn-sm btn-success"><i
+                    class="fa fa-dot-circle-o"></i>
+                  Actualizar</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
+
+
+</div>

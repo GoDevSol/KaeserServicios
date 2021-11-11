@@ -1,0 +1,47 @@
+
+<ion-content [fullscreen]="true"> 
+
+  <div id="container" style="padding: 10%; margin-top:5%;">
+
+
+<form [formGroup]="formLogin">
+
+<ion-item class="roundedInput">
+  <ion-input formControlName="user" placeholder="Usuario"></ion-input>
+</ion-item>
+
+<ion-item class="roundedInput">
+  <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+</ion-item>
+<div style="text-align: -webkit-center;">
+  <ion-button [disabled]="!formLogin.valid"  style="--border-radius: 25px;--padding: 0 25px;" color="warning" (click)="login(formLogin.value)">Iniciar Sesión</ion-button>      
+</div>
+<div style="text-align: -webkit-center;">
+  <ion-button style="--border-radius: 25px;--padding: 0 25px;" color="warning" (click)="registrar()">Registrarme</ion-button>      
+</div>
+</form>
+  </div>  
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top" style=" background-color:rgba(255, 255, 255, 0.342);border-radius: 25px; align-items: flex-end;">
+
+
+      <ion-fab-button (click)="func(1)" color="warning" data-desc="Conócenos" style="margin-right: 5px;">        
+        <img src="assets/img/V2.png" alt="" style="width: 60%; height: 60% ; filter: invert(1);" >        
+      </ion-fab-button>      
+      <ion-fab-button (click)="func(2)" color="warning" data-desc="Cotización" style="margin-right: 5px;">        
+        <img src="assets/img/V3.png" alt="" style="width: 60%; height: 60%; filter: invert(1);">
+      </ion-fab-button>
+      <ion-fab-button (click)="func(3)" color="warning"  data-desc="Convenio de Mantenimiento" style="margin-right: 5px;">        
+        <img src="assets/img/V4.png" alt="" style="width: 60%; height: 60%;filter: invert(1);">
+      </ion-fab-button>
+      <ion-fab-button (click)="func(4)" color="warning" data-desc="Atención al cliente" style="margin-right: 5px;">        
+        <img src="assets/img/V5.png" alt="" style="width: 60%; height: 60%;filter: invert(1);">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,67 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+
+.dropdown-item:hover {
+    
+    background-color: #ffc107;
+}
+
+.dropdown-item:active {
+    
+    background-color: #ffc107;
+}
+
+.dropdown-item.active{
+    
+    background-color: #ffc107;
+}
+
+.sidebar .nav-link:hover {    
+    background-color: #ffc107;
+}
+.sidebar .nav-link.active .nav-icon {
+    color: #ffc107;
+}
+
+.custom-select:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgb(216 176 32 / 25%);
+}
+
+.form-control:focus {    
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgb(216 176 32 / 25%);
+    
+}
+
+.page-item.active .page-link {
+ 
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+
+.btn:focus, .btn.focus { 
+    box-shadow: 0 0 0 0.2rem rgb(216 210 32 / 25%);
+}
+
+.card-header{
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: #000000;     
+}
+
+.no-footer{
+    margin-bottom: 25px;
+}
+

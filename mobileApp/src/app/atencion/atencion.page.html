@@ -1,0 +1,110 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: black; border-bottom: #F4CC27 solid;">
+    <ion-img slot="start" style="height: 70px;" src="assets/img/principal/LogoMenu.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color:#F4CC27;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+
+  <ion-toolbar
+    style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+    <div style="margin-top: 10px;">
+      <img (click)="home()" style="height: 20px;display: inline; width: 20px; vertical-align: super;"
+        src="assets/img/conocenos/Return.png">
+      <img (click)="home()" style="height: 40px;display: inline; width: 40px;" src="assets/img/atencion/atencion.png">
+      <h6 (click)="home()"
+        style="margin-left: 10px;display: inline; text-decoration: underline;color: white; text-decoration-color: #F4CC27;vertical-align: top;">
+        Atención al Cliente</h6>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+  style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+
+
+
+  <ion-card-header style="padding-bottom: 0px; text-align: left;">
+    <ion-card-subtitle style="font-size: 13px; color: white;">Para obtener información adicional puede comunicarse con
+      un representante Kaeser, comuníquese al número según su País.
+    </ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-grid style="margin-top: 20px;">
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <div style="margin-bottom: 15px;">
+          <p style="font-size: 15px;">Teléfonos de servicio</p>
+        </div>
+        <p class="title">Guatemala</p>
+        <p>PBX: (502) 2412-6000</p>
+        <p>servicios.guatemala@kaeser.com</p>
+        <div style="text-align: -webkit-center;">
+          <ion-button (click)="call()" style="margin-top: 15px;--border-radius: 25px;--padding: 0 25px;"
+            color="warning">LLAMAR
+          </ion-button>
+        </div>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 20px;">
+      <ion-col size="6" style="text-align: left;">
+        <p class="title">El Salvador</p>
+        <p>PBX: (503) 2245-8600</p>
+        <p>servicios.elsalvador@kaeser.com</p>
+
+      </ion-col>
+      <ion-col size="6" style="text-align: left;">
+        <p class="title">Costa Rica</p>
+        <p>PBX: (506) 4404-3450</p>
+        <p>servicios.costarica@kaeser.com</p>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" style="text-align: left;">
+        <p class="title">Honduras</p>
+        <p>PBX: (504) 2509-7333</p>
+        <p>servicios.honduras@kaeser.com</p>
+
+      </ion-col>
+      <ion-col size="6" style="text-align: left;">
+        <p class="title">Panamá</p>
+        <p>PBX: (507) 393-7000</p>
+        <p>servicios.panama@kaeser.com</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" style="text-align: left;">
+        <p class="title">Nicaragua</p>
+        <p>PBX: (505) 2254-6766</p>
+        <p>info@optima.com.ni</p>
+      </ion-col>
+      <ion-col size="6" style="text-align: left;">
+        <img style="height: 300px;display: inline;" src="assets/img/atencion/persona.png">
+      </ion-col>
+    </ion-row>
+
+
+
+  </ion-grid>
+
+
+
+
+
+  <img style="height: 90px;position: absolute;margin-top: -255px;" src="assets/img/atencion/logo.png">
+
+
+
+
+
+
+
+
+</ion-content>

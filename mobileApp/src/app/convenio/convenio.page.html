@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: black; border-bottom: #F4CC27 solid;">
+    <ion-img slot="start" style="height: 70px;" src="assets/img/principal/LogoMenu.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color:#F4CC27;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+
+  <ion-toolbar
+    style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+    <div style="margin-top: 10px;">
+      <img (click)="home()" style="height: 20px;display: inline; width: 20px; vertical-align: super;"
+        src="assets/img/conocenos/Return.png">
+      <img (click)="home()" style="height: 40px;display: inline; width: 40px;" src="assets/img/convenio/convenio.png">
+      <div style="display: inline-block;width: 250px;">
+        <p (click)="home()"
+          style="margin-left: 10px;display: inline; text-decoration: underline;color: white; text-decoration-color: #F4CC27;vertical-align: top;">
+          Conoce Nuestros Convenios de Mantenimiento</p>
+      </div>
+
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+  style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+
+
+  <ion-card>
+    <ion-card-header style="padding-bottom: 0px;">
+      <ion-card-subtitle style="text-decoration: underline; text-decoration-color: #F4CC27; font-weight: bold;">
+        Mantenimiento: con nosotros estará en las mejores manos</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content style="text-align: justify;line-height: 1;font-size: 14px;">
+      Si se trata de garantizar la seguridad operativa, la disponibilidad y el mantenimiento en buen estado de la
+      estación de aire comprimido, la mejor opción es un contrato de mantenimiento Kaeser. Acorde a los productos y a
+      los intervalos correspondientes, los técnicos del servicio de asistencia Kaeser realizan inspecciones y trabajos
+      de mantenimiento.
+    </ion-card-content>
+    <ion-card-content style="text-align: justify;line-height: 1; padding-top: 0px;font-size: 14px;">
+      Para tener más información de nuestros Convenios de Mantenimiento, por favor complete el siguiente formulario de
+      solicitud.
+    </ion-card-content>
+
+
+    <form [formGroup]="formRegister">
+
+
+
+      <ion-item class="roundedInput">
+        <ion-input formControlName="nombre" type="text" style="border-style: none;" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item class="roundedInput">
+        <ion-input formControlName="apellido" type="text" placeholder="Apellido"></ion-input>
+      </ion-item>
+      <ion-item class="roundedInput">
+        <ion-input formControlName="compañia" type="text" placeholder="Compañía"></ion-input>
+      </ion-item>
+      <ion-item class="roundedInput">
+        <ion-input formControlName="correo" type="email" placeholder="Correo Electrónico"></ion-input>
+      </ion-item>
+      <ion-item class="roundedInput">
+        <ion-input formControlName="telefono" placeholder="Teléfono"></ion-input>
+      </ion-item>
+
+
+
+      <div style="text-align: -webkit-center;">
+        <ion-button [disabled]="!formRegister.valid" (click)="SendEmail(formRegister.value)"
+          style="--border-radius: 25px;--padding: 0 25px;" color="warning">ENVIAR</ion-button>
+      </div>
+
+    </form>
+
+    <ion-img style="height: 75px;" src="assets/img/principal/LogoKaeser.png"></ion-img>
+
+
+
+  </ion-card>
+
+
+
+</ion-content>

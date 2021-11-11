@@ -1,0 +1,72 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar style="--background: black; border-bottom: #F4CC27 solid;">
+    <ion-img slot="start" style="height: 70px;" src="assets/img/principal/LogoMenu.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color:#F4CC27;"></ion-menu-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--color: #F4CC27; --background: black; --background: url('/assets/img/Principal.png') no-repeat center center / cover;">
+
+
+  <ion-grid style="margin-top: 25px;">
+    <ion-row>
+      <ion-col class="cell-class">
+        <ion-img  (click)="enviar('notificaciones')" style="height: 55px;" src="assets/img/V1.png"></ion-img>
+      </ion-col>
+      <ion-col class="cell-class">
+        <ion-img (click)="enviar('conocenos')" style="height: 55px;" src="assets/img/V2.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img (click)="enviar('cotizacion')" style="height: 55px;" src="assets/img/V3.png"></ion-img>
+      </ion-col>      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Notificaciones
+      </ion-col>
+      <ion-col>
+        Conócenos
+      </ion-col>
+      <ion-col>
+        Cotización de Servicios Kaeser
+      </ion-col>      
+    </ion-row>
+
+    
+    <ion-row>
+      <ion-col>
+        <ion-img style="height: 70px;" src="assets/img/V.png"></ion-img>      
+      </ion-col>
+    </ion-row>
+  
+
+  <ion-row>
+    <ion-col class="cell-class">
+      <ion-img (click)="enviar('convenio')" style="height: 55px;" src="assets/img/V4.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img (click)="enviar('atencion')" style="height: 55px;" src="assets/img/V5.png"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      Conoce Nuestros Convenios de Mantenimiento
+    </ion-col>
+    <ion-col>
+      Atención al Cliente
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  
+
+<ion-img  style="height: 140px;" src="assets/img/principal/LogoKaeser.png"></ion-img>
+  
+  
+  
+  
+  
+  
+</ion-content>

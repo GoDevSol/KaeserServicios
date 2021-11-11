@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu (ionWillOpen)="onMenuOpen()" swipeGesture="false" contentId="main-content" type="overlay"
+      *ngIf="asideVisible">
+      <ion-content>
+        <ion-list id="inbox-list">
+
+          <ion-list-header>Menu</ion-list-header>
+          <ion-list>
+            <ion-label>
+              <h2>{{ Compania }}</h2>
+              <p>{{ Nombre }}</p>
+            </ion-label>
+          </ion-list>
+
+          <ion-menu-toggle auto-hide="true" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" (click)="logOut(p.url)" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+
+      <img style="align-self: center;" height="140" width="140" src="assets/img/principal/LogoKaeser.png">
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

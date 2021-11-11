@@ -1,0 +1,8 @@
+{
+  "name": "Kaeser",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

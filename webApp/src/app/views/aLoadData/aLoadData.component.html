@@ -1,0 +1,317 @@
+<div class="animated fadeIn">
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Equipos Kaeser
+        </div>
+        <div class="card-body">
+
+          <div class="row">
+            <div class="col-sm-6 col-lg-4">
+              <div class="card text-white bg-warning">
+                <div class="card-body ">
+                  <div class="btn-group float-right" dropdown>
+
+                  </div>
+                  <div class="text-value">{{records.length}}</div>
+                  <div>Equipos Registrados</div>
+                </div>
+
+              </div>
+            </div>
+            <!--/.col-->
+
+          </div>
+
+
+          <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="card-header">
+            <button (click)="openModal(aceptar,0)" type="button" class="btn btn-success">CARGAR ARCHIVO CSV</button>
+
+          </div>
+
+          <div style="overflow-x:scroll;overflow-y: scroll;">
+
+            <table [dtTrigger]="dtTrigger" class="table table-striped table-bordered table-sm row-border hover"
+              datatable [dtOptions]="dtOptions">
+
+              <thead class="thead-light">
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Codigo</th>
+                  <th>Cliente</th>
+                  <th>Categoria</th>
+                  <th>Equipo</th>
+                  <th>Penultimo Horometro</th>
+                  <th>Fecha Penultimo Horometro</th>
+                  <th>Ultimo Horometro</th>
+                  <th>Fecha Ultimo Horometro</th>
+                  <th>Accion</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of records; let i = index">
+                  <td class="text-center">
+                    {{i+1}}
+                  </td>
+                  <td class="text-center">
+                    {{item.equipment}}
+                  </td>
+                  <td>
+                    <div>{{(item.cliente).toUpperCase()}}</div>
+                  </td>
+                  <td class="text-left">
+                    {{item.categoria.toUpperCase()}}
+                  </td>
+
+                  <td class="text-left">
+                    {{item.equipo.toUpperCase()}}
+                  </td>
+
+                  <td class="text-center">
+                    {{item.penultimoHorometro.toUpperCase()}}
+                  </td>
+
+                  <td class="text-center">
+                    {{item.fechaPenultimoHorometro.toUpperCase()}}
+                  </td>
+
+
+                  <td>
+                    {{item.ultimoHorometro.toUpperCase()}}
+                  </td>
+
+                  <td class="text-center">
+                    {{item.fechaUltimoHorometro.toUpperCase()}}
+                  </td>
+
+                  <td>
+
+                    <div class="btn-group float-center" dropdown>
+                      <button type="button" class="btn dropdown-toggle p-0" dropdownToggle>
+                        <i class="icon-settings"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+                        <a class="dropdown-item" (click)="openModalData(reiniciar, item)">Reiniciar Horometro</a>
+                      </div>
+                    </div>
+
+
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
+
+
+</div>
+
+
+
+
+
+<ng-template #reiniciar>
+  <div class="modal-header" style="background-color:#ffc107">
+    <h4 class="modal-title"> Reiniciar Horometro.</h4>
+    <button type="button" class="close" (click)="decline()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body text-center">
+    <h6>Ingrese el horometro.</h6>
+    <div class="form-group">
+      <input name="horo" [(ngModel)]="horo" type="number" class="form-control">
+    </div>
+
+    <h6>Ingrese la fecha del servicio.</h6>
+    <div class="form-group">
+      <input name="fecha" [(ngModel)]="fecha" type="date" class="form-control">
+    </div>
+    <div style="overflow-x:scroll;overflow-y: scroll;">
+      <table class="table table-striped table-bordered table-sm row-border hover">
+
+        <thead class="thead-light">
+          <tr>
+            <th class="text-center">#</th>
+            <th>Codigo</th>
+            <th>Cliente</th>
+            <th>Categoria</th>
+            <th>Equipo</th>
+            <th>Ultimo Horometro</th>
+            <th>Fecha Ultimo Horometro</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of record; let i = index">
+            <td class="text-center">
+              {{i+1}}
+            </td>
+            <td class="text-center">
+              {{item.equipment}}
+            </td>
+            <td>
+              <div>{{(item.cliente).toUpperCase()}}</div>
+            </td>
+            <td class="text-left">
+              {{item.categoria.toUpperCase()}}
+            </td>
+
+            <td class="text-left">
+              {{item.equipo.toUpperCase()}}
+            </td>
+
+            <td>
+              {{item.ultimoHorometro.toUpperCase()}}
+            </td>
+
+            <td class="text-center">
+              {{item.fechaUltimoHorometro.toUpperCase()}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <button type="button" class="btn btn-warning" (click)="reiniciarHorometro()">Reiniciar</button>
+    <button type="button" class="btn btn-default" (click)="decline()">Cancelar</button>
+  </div>
+</ng-template>
+
+
+
+
+<ng-template #aceptar class="modal-dialog modal-success" role="document" style=" border-color:#4dbd74">
+
+  <div class="modal-header" style="background-color:#4dbd74">
+    <h4 class="modal-title"> Seleccione un archivo CSV desde su computador.</h4>
+    <button type="button" class="close" (click)="decline()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body text-center">
+    <div class="form-group">
+
+      <h5>Requerimientos del archivo.</h5>
+      <div class="text-left" style="margin-top: 20px; margin-bottom: 20px;">
+        <h6>1. Los campos deben de ir separados por punto y coma (;).</h6>
+        <h6>2. El orden de los campos es el siguiente .</h6>
+        <h7>(Sold Party/ Nombre Cliente /Codigo Equipo / Categoria / Equipo /
+          penultimo Horometro / fecha Penultimo / ultimo horometro / fecha ultimo horometro ) </h7>
+        <br>
+        <h6>3.Las fechas pueden ir separadas por "/" o "-" y deben de ser en formato Año/Mes/Dia o Dia/Mes/Año</h6>
+        <br>
+        <h6>Ejemplo.</h6>
+        <h7>10267;Ortitlán Limitada;2430637;Compresor de Tornillo;ASD 25;35861;2014-11-25;58773;2015/02/02</h7>
+      </div>
+
+
+      <input id="file" type="file" class="form-control" (change)="onFileChange($event)" accept=".csv">
+
+
+      <br>
+
+      <button type="button" class="btn btn-success" (click)="LoadData()">Aceptar</button>
+      <button type="button" class="btn btn-default" (click)="decline()">Cancelar</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #error role="document" style=" border-color:#f86c6b">
+
+  <div class="modal-header" style="background-color:#f86c6b">
+    <h4 class="modal-title"> !Ha ocurrido un error!</h4>
+    <button type="button" class="close" (click)="decline()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    <h6>ERROR: No se ha podido reiniciar el horometro. Porfavor ingrese todos los datos.</h6>
+    <div class="form-group">
+
+      <br>
+      <button type="button" class="btn btn-danger" (click)="decline()">Aceptar</button>
+
+    </div>
+  </div>
+</ng-template>

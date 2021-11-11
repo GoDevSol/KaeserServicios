@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: black; border-bottom: #F4CC27 solid;">
+    <ion-img slot="start" style="height: 70px;" src="assets/img/principal/LogoMenu.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color:#F4CC27;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+
+  <ion-toolbar
+    style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+    <div style="margin-top: 10px;">
+      <img (click)="home()" style="height: 20px;display: inline; width: 20px; vertical-align: super;"
+        src="assets/img/conocenos/Return.png">
+      <img (click)="home()" style="height: 40px;display: inline; width: 40px;"
+        src="assets/img/conocenos/iconConocenos.png">
+      <h6 (click)="home()"
+        style="margin-left: 10px;display: inline; text-decoration: underline;color: white; text-decoration-color: #F4CC27;vertical-align: top;">
+        Conócenos</h6>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+  style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+
+
+  <ion-card>
+    <ion-card-header style="padding-bottom: 0px;">
+      <ion-card-subtitle style="text-decoration: underline; text-decoration-color: #F4CC27; font-weight: bold;">Servicio
+        completo para todo
+        el sistema de aire comprimido
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content style="text-align: justify;line-height: 1;">
+      Nuestra red nacional de subsidiarias y socios distribuidores altamente capacitados le brinda un amplio portafolio
+      de servicios. Desde el análisis del desempeño pasando por la planificación de la instalación o el servicio de
+      emergencia permanente, los profesionales de asistencia técnica global de Kaeser optimizan su estación de aire
+      comprimido.
+    </ion-card-content>
+
+    <ion-card-header style="padding-bottom: 0px;">
+      <ion-card-subtitle style="text-decoration: underline; text-decoration-color: #F4CC27; font-weight: bold;">Sobre
+        Kaeser</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content style="text-align: justify;line-height: 1;">
+      Kaeser Compresores de Centroamérica ofrece productos, servicios y sistemas completos para el abastecimiento de
+      procesos de producción y de trabajo con aire comprimido de alta calidad. Nuestras soluciones abarcan tanto la
+      generación de aire comprimido como su tratamiento y distribución, y tienen como objetivo alcanzar la máxima
+      economía global. Kaeser Compresores existe desde 1919 y está presente en todo el mundo por medio de sus propias
+      subsidiarias y competentes socios distribuidores.
+    </ion-card-content>
+
+
+
+    <ion-img style="height: 140px;" src="assets/img/conocenos/Cars.png"></ion-img>
+
+
+
+  </ion-card>
+
+
+
+</ion-content>

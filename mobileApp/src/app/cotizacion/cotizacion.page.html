@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: black; border-bottom: #F4CC27 solid;">
+    <ion-img slot="start" style="height: 70px;" src="assets/img/principal/LogoMenu.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color:#F4CC27;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+
+  <ion-toolbar
+    style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+    <div style="margin-top: 10px;">
+      <img (click)="home()" style="height: 20px;display: inline; width: 20px; vertical-align: super;"
+        src="assets/img/conocenos/Return.png">
+      <img (click)="home()" style="height: 40px;display: inline; width: 40px;"
+        src="assets/img/cotizacion/cotizacion.png">
+      <h6 (click)="home()"
+        style="margin-left: 10px;display: inline; text-decoration: underline;color: white; text-decoration-color: #F4CC27;vertical-align: top;">
+        Cotización de Servicios Kaeser</h6>
+
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+  style="--color: #F4CC27; --background: black; --background: url('/assets/img/conocenos/Conocenos.png') no-repeat center center / cover;">
+
+
+  <ion-card>
+
+    <ion-card-content style="text-align: justify;line-height: 1;font-size: 14px;">
+      Para tener más información de nuestro Kaeser Air Service, por favor complete el siguiente formulario de solicitud
+    </ion-card-content>
+
+
+
+    <form [formGroup]="formRegister">
+
+
+
+      <ion-item class="roundedInput">
+        <ion-input formControlName="nombre" type="text" style="border-style: none;" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item class="roundedInput">
+        <ion-input formControlName="apellido" type="text" placeholder="Apellido"></ion-input>
+      </ion-item>
+      <ion-item class="roundedInput">
+        <ion-input formControlName="compañia" type="text" placeholder="Compañía"></ion-input>
+      </ion-item>
+      <ion-item class="roundedInput">
+        <ion-input formControlName="correo" type="email" placeholder="Correo Electrónico"></ion-input>
+      </ion-item>
+      <ion-item class="roundedInput">
+        <ion-input formControlName="telefono" placeholder="Teléfono"></ion-input>
+      </ion-item>
+
+
+
+      <div style="text-align: -webkit-center;">
+        <ion-button [disabled]="!formRegister.valid" (click)="SendEmail(formRegister.value)" type="submit"
+          style="--border-radius: 25px;--padding: 0 25px;" color="warning">ENVIAR</ion-button>
+      </div>
+
+    </form>
+
+    <div style="text-align: -webkit-right;">
+      <img style="height: 55px;" src="assets/img/principal/LogoKaeser.png">
+    </div>
+
+  </ion-card>
+
+  <div style="text-align: -webkit-center; position: relative;  top: -70px; margin-bottom: -50px;">
+    <img style="height: 215px;" src="assets/img/cotizacion/cotizacionPersona.png">
+  </div>
+
+
+
+</ion-content>
